@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.Views.CaloriesView"
+             Title="CaloriesView">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <Label Text="Calories" FontSize="Large" HorizontalTextAlignment="Center" />
+
+            <Label x:Name="CalorieOutput"
+                   FontSize="Large" HorizontalTextAlignment="Center" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="Goal For Today: " FontSize="Large" />
+                <Label x:Name="OutputCalorieGoal" Text=" 0" FontSize="Large" />
+            </StackLayout>
+
+            <Entry x:Name="_CalorieGoalInput" Placeholder="Enter Calorie Goal Here"
+                   FontSize="Large" HorizontalTextAlignment="Center" />
+
+            <Button Clicked="SetCalorieGoal" Text="Set Goal" BackgroundColor="#007BFF" FontSize="Large" HorizontalOptions="Center" />
+
+            <Label x:Name="CalorieGoalCompleted"
+                    FontSize="Large" HorizontalTextAlignment="Center" TextColor="#28A745" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FinalProject.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FinalProject"
+    xmlns:views="clr-namespace:FinalProject.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="FinalProject">
+
+    <TabBar>
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+        <ShellContent
+    Title="Calories"
+    ContentTemplate="{DataTemplate views:CaloriesView}"
+    Route="CaloriesView" />
+
+        <ShellContent
+    Title="Water"
+    ContentTemplate="{DataTemplate views:WaterIntakeView}"
+    Route="WaterIntakeView" />
+
+        <ShellContent
+    Title="Food"
+    ContentTemplate="{DataTemplate views:FoodView}"
+    Route="FoodView" />
+    </TabBar>
+</Shell>

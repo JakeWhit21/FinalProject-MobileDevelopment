@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.Views.WaterIntakeView"
+             Title="WaterIntakeView">
+    <ContentPage.Content>
+        <StackLayout Margin="20" Spacing="20">
+            <!-- Water Consumed Section -->
+            <Label Text="Water Consumed Today:" FontSize="18" />
+            <Label Text="0 Oz." x:Name="OutputWaterDrank" FontSize="24" TextColor="#007BFF" />
+
+            <Editor Placeholder="Enter amount of water drank (Oz)" x:Name="_WaterDrankInput" FontSize="16" HeightRequest="40" />
+
+            <Button Text="Drink" Clicked="SetWaterDrank" BackgroundColor="#28A745" TextColor="White" FontSize="16" HeightRequest="40" />
+
+            <!-- Water Goal Section -->
+            <Label Text="Water Goal:" FontSize="18" />
+            <Label Text="0 Oz." x:Name="OutputWaterGoal" FontSize="24" TextColor="#007BFF" />
+            <Label x:Name="WaterGoalCompleted" FontSize="Large" TextColor="#28A745"/>
+
+            <Editor Placeholder="Enter Water Goal (Oz)" x:Name="_WaterGoalInput" FontSize="16" HeightRequest="40" />
+
+            <Button Text="Set Water Goal" Clicked="SetWaterGoal" BackgroundColor="#007BFF" TextColor="White" FontSize="16" HeightRequest="40" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

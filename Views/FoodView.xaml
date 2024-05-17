@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.Views.FoodView"
+             Title="FoodView">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <!-- Grid to display the table -->
+            <Grid x:Name="gridLayout" BackgroundColor="#E8E8E8" Margin="0,10">
+                <!-- Define row definitions -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!-- Define column definitions -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Header row -->
+                <Label Text="Name" Grid.Row="0" Grid.Column="0" BackgroundColor="#CCCCCC" FontAttributes="Bold" Padding="5"/>
+                <Label Text="Calories" Grid.Row="0" Grid.Column="1" BackgroundColor="#CCCCCC" FontAttributes="Bold" Padding="5"/>
+                <Label Text="Time Ate" Grid.Row="0" Grid.Column="2" BackgroundColor="#CCCCCC" FontAttributes="Bold" Padding="5"/>
+            </Grid>
+
+            <!-- Button to add a new row -->
+            <Button x:Name="addRowButton" Text="Add Row" Clicked="AddRow_Clicked" BackgroundColor="#007BFF" TextColor="White" Margin="0,10" />
+
+            <!-- Button to save row data (outside the table) -->
+            <Button x:Name="saveButton" Text="Save" Clicked="SaveButton_Clicked" IsEnabled="False" BackgroundColor="#28A745" TextColor="White" Margin="0,10" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

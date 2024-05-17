@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.MainPage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="30,0" Spacing="25">
+                <!-- App Title -->
+                <Label Text="Health App" FontSize="24" FontAttributes="Bold"
+                       VerticalOptions="Center" HorizontalOptions="Center" />
+
+                <!-- Today's Date -->
+                <Label x:Name="getTodaysDate" FontSize="18" TextColor="#007BFF"
+                       VerticalOptions="Center" HorizontalOptions="Center" />
+
+                <!-- API Data Output -->
+                <Label x:Name="ApiOutput" Text="This is where the API data goes"
+                       FontSize="16" VerticalOptions="Start" HorizontalTextAlignment="Center"
+                       TextColor="#333333" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
